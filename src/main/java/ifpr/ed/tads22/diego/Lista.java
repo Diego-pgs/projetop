@@ -31,8 +31,22 @@ public class Lista {
         }
     }
 
-    public void imprimeLista(Nodo navegador){
-        // Codigo imprimir lista;
-        // Fazer codigo recursivo...
+    public Nodo getInicio() {
+        return inicio;
+    }
+
+    public void imprimeLista(Nodo navegador){ // imprime recursivamente
+        System.out.print(navegador.getValue()+" ");
+
+        if(navegador.getProx() != null){
+            imprimeLista(navegador.getProx());
+        }
+    }
+
+    public void imprimeAtsil(Nodo navegador){ // imprime recursivamente ao contrário
+        if(navegador.getProx() != null){
+            imprimeAtsil(navegador.getProx());
+        }
+        System.out.print(navegador.getValue()+" ");   
     }
 }
