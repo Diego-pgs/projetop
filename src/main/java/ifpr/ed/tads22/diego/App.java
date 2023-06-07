@@ -1,13 +1,22 @@
 package ifpr.ed.tads22.diego;
 
+import java.util.Scanner;
+
 public class App{
+
+    static Scanner teclado = new Scanner(System.in);
+
     public static void main( String[] args ){
         System.out.println("Hello World\n");
 
         //codigoAulaUm();
         //criaListaeImprime();
         //usarPilha();
-        usarFila();
+        //usarFila();
+        usarDeque();
+
+        /* FAZER INTERFACE GRAFICA... */
+
     }
 
     public static void codigoAulaUm(){
@@ -64,5 +73,30 @@ public class App{
         fila.desenfileira();
         fila.desenfileira();
         fila.print(fila.getHead());
+    }
+
+    public static void usarDeque(){
+        Deque deque;
+        deque = new Deque();
+        
+        
+        deque.putLeft(15);
+        deque.putLeft(22);
+        deque.putLeft(54);
+        deque.putLeft(42);
+        deque.putLeft(75);
+        
+        deque.putRight(55);
+        deque.putRight(43);
+        deque.putRight(25);
+        deque.putRight(93);
+        deque.putRight(21);
+
+        //deque.outLeft();
+        //deque.outLeft();
+        //deque.outLeft();
+        deque.outRight();
+        deque.imprimeDeque(deque.getLeft());
+     
     }
 }

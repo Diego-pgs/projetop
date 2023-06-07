@@ -18,8 +18,8 @@ public class Fila {
         novo.setValue(i);
 
         if(head == null){
-            head=novo;
-            tail=novo;
+            head = novo;
+            tail = novo;
         }else{
             tail.setProx(novo);
             tail = novo;
